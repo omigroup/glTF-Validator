@@ -568,6 +568,20 @@ class SemanticError extends IssueType {
               'The inertia tensor must be a symmetric 3x3 matrix.',
           Severity.Error);
 
+  static final SemanticError omiPhysicsJointConstraintNoAxes =
+      SemanticError._(
+          'OMI_PHYSICS_JOINT_CONSTRAINT_NO_AXES_CONSTRAINED',
+          (args) => 'This physics joint constraint does not constrain any '
+              'axes. This joint constraint will do nothing.',
+          Severity.Warning);
+
+  static final SemanticError omiPhysicsJointConstraintInvalidLimits =
+      SemanticError._(
+          'OMI_PHYSICS_JOINT_CONSTRAINT_INVALID_LIMITS',
+          (args) => 'This physics joint constraint has invalid limits. '
+              'The lower limit must be less than or equal to the upper limit.',
+          Severity.Error);
+
   SemanticError._(String type, ErrorFunction message,
       [Severity severity = Severity.Error])
       : super(type, message, severity);

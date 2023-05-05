@@ -71,6 +71,8 @@
 |OMI_COLLIDER_TRIMESH_TRIGGER|This collider is both a trimesh and a trigger. This is valid but not recommended since trimeshes do not have an interior volume and the trigger may not work as expected.|Information|
 |OMI_PHYSICS_BODY_INVALID_INERTIA_TENSOR|This physics body has an invalid inertia tensor. The inertia tensor must be a symmetric 3x3 matrix.|Error|
 |OMI_PHYSICS_BODY_MISSING_COLLIDER|This physics body does not have any colliders. This is valid but body will not collide with anything.|Information|
+|OMI_PHYSICS_JOINT_CONSTRAINT_INVALID_LIMITS|This physics joint constraint has invalid limits. The lower limit must be less than or equal to the upper limit.|Error|
+|OMI_PHYSICS_JOINT_CONSTRAINT_NO_AXES_CONSTRAINED|This physics joint constraint does not constrain any axes. This joint constraint will do nothing.|Warning|
 |ROTATION_NON_UNIT|Rotation quaternion must be normalized.|Error|
 |SHARES_NODE_WITH|`%1` must be on its own glTF node, it cannot be on the same glTF node as `%2`. Move the `%3` to a child node.|Error|
 |SKIN_NO_COMMON_ROOT|Joints do not have a common root.|Error|
